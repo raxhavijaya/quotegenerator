@@ -11,7 +11,7 @@ function randomQuote() {
   authorName.classList.add("active");
   quoteBtn.classList.add("loading");
   quoteBtn.innerText = "";
-  fetch("http://api.quotable.io/random")
+  fetch("https://api.quotable.io/random")
     .then((response) => response.json())
     .then((result) => {
       quoteText.innerText = result.content;
