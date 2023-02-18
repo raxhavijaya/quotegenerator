@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/roadbg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  background: rgb(255, 255, 255, 0.8);
+  width: 600px;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .quote-area {
+  margin: 0;
+}
+
+.quote-area .user-area {
+  display: flex;
+}
+
+.user-area .user {
+  margin: auto 0;
+}
+
+.user p {
+  font-weight: 200;
+  font-size: 13px;
+  color: rgb(80, 80, 80, 1);
+}
+
+.quote-area .quotes {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  margin: 10px;
+  width: 65px;
+  border-radius: 50%;
+}
+
+.quote-area i {
+  font-size: 14px;
+}
+
+.quote-area i:first-child {
+  margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child {
+  display: flex;
+  margin: 0 0 3px 10px;
+  align-items: flex-end;
+}
+
+.quote-area .quote {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.quote-area .author {
+  display: flex;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-right: 4px;
+  font-style: italic;
+  justify-content: flex-end;
+}
+
+.author span:first-child {
+  margin: -3px 5px 0 0;
+  font-family: monospace;
+}
+
+.hastag {
+  display: flex;
+  margin: 5px 5px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hastag p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-right: 10px;
+}
+
+.wrapper .buttons {
+  margin-top: 20px;
+  border-top: 1px solid #ababab;
+}
+
+.buttons .features {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features ul {
+  display: flex;
+  margin: 5px;
+}
+
+.features ul li {
+  margin: 0 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  cursor: pointer;
+  color: rgb(53, 53, 53);
+  list-style: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid gray;
+  transition: all 0.3 ease;
+}
+
+ul li:is(:hover, .active) {
+  color: #fff;
+  background: #353535;
+}
+
+ul .speech.active {
+  pointer-events: none;
+}
+
+.buttons button {
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #353535;
+}
+
+.buttons button.loading::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #000;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.quote.in,
+.authorName.in {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.quote.active,
+.authorName.active {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 80%;
+  }
+
+  .user p {
+    font-size: 10px;
+  }
+
+  img {
+    margin: 8px;
+    width: 50px;
+  }
+
+  .quote-area i {
+    font-size: 12px;
+  }
+
+  .quote-area .quote {
+    font-size: 12px;
+  }
+
+  .quote-area .author {
+    margin: 2px;
+    font-size: 10px;
+  }
+
+  .hastag p {
+    font-size: 10px;
+  }
+
+  .features ul {
+    margin: 0;
+  }
+
+  .features ul li {
+    height: 25px;
+    width: 25px;
+  }
+
+  li i {
+    font-size: 13px;
+  }
+
+  .buttons button {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+
+  .buttons button.loading::after {
+    width: 13px;
+    height: 13px;
+  }
+
+  .wrapper .buttons {
+    margin-top: 8px;
+  }
+
+  .buttons .features {
+    margin-top: 8px;
+  }
+}
