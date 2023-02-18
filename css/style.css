@@ -7,10 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-html, body{
-  overflow: hidden;
-}
-
 body {
   display: flex;
   min-height: 100vh;
