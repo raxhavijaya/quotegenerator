@@ -188,6 +188,10 @@ ul .speech.active {
 }
 
 @media only screen and (max-width: 768px) {
+body{
+  height: 100vh;
+}
+
   .wrapper {
     width: 80%;
   }
